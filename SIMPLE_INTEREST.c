@@ -1,8 +1,8 @@
 #include<stdio.h>
 int main()
 {
-    int P,T,R,Simpleinterest;
-    scanf("%d%d%d%d",&P,&T,&R);
-    Simpleinterest=(P*T*R)/100;
-    printf("%d",Simpleinterest);
+    int s,p,t,r;
+    scanf("%d%d%d",&p,&t,&r);
+    s=(p*t*r)/100;
+    printf("%d",s);
 }
