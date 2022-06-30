@@ -1,20 +1,20 @@
 #include<stdio.h>
-int main()
+int gcd(int x,int y)
 {
-    int a,b,i,t;
-    scanf("%d%d",&a,&b);
-    if(a<b)
+    int g,i;
+    for(i=1;i<=x && i<=y;i++)
     {
-        t=b;
-        b=a;
-        a=t;
-    }
-    for(i=b;i>=1;i--)
-    {
-        if(a%i==0 && b%i==0)
+        if(x%i==0 && y%i==0)
         {
-            printf("%d",i);
-            break;
+            g=i;
         }
     }
+    return g;
+}
+int main()
+{
+    int a,b,g;
+    scanf("%d%d",&a,&b);
+    g=gcd(a,b);
+    printf("%d",g);
 }
