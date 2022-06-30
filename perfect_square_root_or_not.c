@@ -1,11 +1,11 @@
 #include<stdio.h>
 int main()
 {
-    int i,num;
-    scanf("%d",&num);
-    for(i=0;i<=num;i++)
+    int i,number;
+    scanf("%d",&number);
+    for(i=0;i<=number;i++)
     {
-        if(num==i*i)
+        if(number==i*i)
         {
             printf("True");
             return 0;
