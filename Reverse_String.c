@@ -1,17 +1,23 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <string.h>
+ 
 int main()
 {
-    char str[100],s[100];
-    int i,c=0;
-    scanf("%[^
+  	char str[100];
+  	int i, len;
+  	scanf("%[^
 ]s",str);
-    for(i=0;str[i]!=NULL;i++)
-    {
-        c++;
-    }
-    for(i=c-1;i>=0;i--)
-    {
-        printf("%c",str[i]);
-    }
-    return 0;
+  	
+  	len = strlen(str);
+  	for(i = len - 1; i >= 0; i--)
+	{
+		if(str[i] == ' ')
+		{
+			str[i] = NULL;
+			printf("%s ", &(str[i]) + 1);	
+		} 
+	}
+	printf("%s", str);
+	
+  	return 0;
 }
