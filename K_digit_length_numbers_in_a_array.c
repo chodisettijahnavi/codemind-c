@@ -1,30 +1,35 @@
 #include<stdio.h>
-#include<string.h>
+int co(int n)
+{
+        int c=0;
+    if (n==0)
+    {
+        return 1;
+    }
+    if (n<0)
+    {
+        n*=-1;
+    }
+    while (n>0)
+    {
+        c++;
+        n/=10;
+    }
+    return c;
+}
 int main()
 {
-    int i,j,n,m,c=0,d=0;
-    scanf("%d",&n);
-    scanf("%d",&m);
-    int a[n];
-    for(i=0;i<n;i++)
+    int n,k;
+    scanf("%d%d",&n,&k);
+    int arr[n];
+    int count=0;
+    for(int i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
-       // printf("%da ",a[i]);
-    }
-    for(i=0;i<n;i++)
-    {
-        int p=a[i];
-        c=0;
-        if(p==0)
-        c=1;
-        while(p)
+        scanf("%d",&arr[i]);
+        if(co(arr[i])==k)
         {
-            p=p/10;
-            c++;
+            count++;
         }
-        //printf("%d ",c);
-        if(c==m)
-            d++;
     }
-    printf("%d",d);
+    printf("%d",count);
 }
